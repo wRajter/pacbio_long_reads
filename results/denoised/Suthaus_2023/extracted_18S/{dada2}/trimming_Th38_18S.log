@@ -1,0 +1,212 @@
+This is cutadapt 4.6 with Python 3.11.0
+Command line parameters: -a ATTACGTCCCTGCCCTTTGTA -g AACCTGGTTGATCCTGCCAG -n 3 -o ../results/denoised/Suthaus_2023/extracted_18S/{dada2}/extracted_18S_Th38_18S.fastq.gz ../raw_data/dada2/Suthaus_2023/Full18S/filtered/Th38_18S.hifi_reads.fastq.gz
+Processing single-end reads on 1 core ...
+Finished in 3.336 s (135.443 µs/read; 0.44 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                  24,631
+Reads with adapters:                    23,864 (96.9%)
+Reads written (passing filters):        24,631 (100.0%)
+
+Total basepairs processed:    42,598,252 bp
+Total written (filtered):     38,706,462 bp (90.9%)
+
+=== Adapter 1 ===
+
+Sequence: ATTACGTCCCTGCCCTTTGTA; Type: regular 3'; Length: 21; Trimmed: 23863 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20-21 bp: 2
+
+Bases preceding removed adapters:
+  A: 0.1%
+  C: 0.0%
+  G: 99.9%
+  T: 0.0%
+  none/other: 0.0%
+WARNING:
+    The adapter is preceded by 'G' extremely often.
+    The provided adapter sequence could be incomplete at its 5' end.
+    Ignore this warning when trimming primers.
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	1	384.9	0	1
+110	1	0.0	2	1
+111	3	0.0	2	3
+126	1	0.0	2	0 1
+128	2	0.0	2	1 1
+129	3	0.0	2	3
+130	2	0.0	2	0 0 2
+132	1	0.0	2	1
+134	1	0.0	2	0 1
+135	1	0.0	2	0 1
+136	1	0.0	2	0 1
+137	59	0.0	2	0 59
+138	60	0.0	2	1 58 1
+139	4	0.0	2	1 3
+140	5	0.0	2	5
+141	2	0.0	2	2
+142	16	0.0	2	1 4 11
+143	20	0.0	2	1 19
+144	10	0.0	2	2 6 2
+145	77	0.0	2	17 58 2
+146	7	0.0	2	2 4 1
+147	8	0.0	2	2 5 1
+148	7	0.0	2	2 3 2
+149	1	0.0	2	0 1
+150	7	0.0	2	6 1
+151	9	0.0	2	1 6 2
+152	56	0.0	2	9 45 2
+153	99	0.0	2	13 84 2
+154	4006	0.0	2	45 3957 4
+155	1735	0.0	2	1590 134 11
+156	195	0.0	2	123 71 1
+157	355	0.0	2	314 37 4
+158	101	0.0	2	84 15 2
+159	753	0.0	2	718 35
+160	708	0.0	2	684 23 1
+161	7445	0.0	2	7340 104 1
+162	428	0.0	2	376 49 3
+163	3879	0.0	2	3287 586 6
+164	245	0.0	2	217 25 3
+165	754	0.0	2	606 148
+166	339	0.0	2	257 81 1
+167	1880	0.0	2	1869 11
+168	73	0.0	2	68 5
+169	28	0.0	2	21 4 3
+170	15	0.0	2	12 2 1
+171	11	0.0	2	11
+172	4	0.0	2	4
+173	2	0.0	2	2
+174	3	0.0	2	3
+175	4	0.0	2	3 1
+176	4	0.0	2	4
+178	1	0.0	2	1
+179	1	0.0	2	1
+180	1	0.0	2	1
+181	1	0.0	2	1
+182	1	0.0	2	0 1
+183	1	0.0	2	1
+185	1	0.0	2	1
+188	1	0.0	2	1
+191	2	0.0	2	2
+192	5	0.0	2	5
+193	270	0.0	2	270
+194	4	0.0	2	4
+197	16	0.0	2	16
+214	1	0.0	2	1
+231	2	0.0	2	0 2
+267	1	0.0	2	1
+285	1	0.0	2	1
+287	1	0.0	2	1
+369	1	0.0	2	1
+404	1	0.0	2	1
+406	1	0.0	2	0 1
+427	1	0.0	2	1
+431	1	0.0	2	1
+433	1	0.0	2	1
+435	1	0.0	2	1
+438	1	0.0	2	0 1
+444	1	0.0	2	1
+448	1	0.0	2	1
+451	1	0.0	2	1
+459	1	0.0	2	1
+470	2	0.0	2	2
+471	1	0.0	2	1
+472	5	0.0	2	5
+484	1	0.0	2	1
+485	1	0.0	2	1
+497	2	0.0	2	2
+503	1	0.0	2	1
+514	1	0.0	2	1
+523	2	0.0	2	2
+526	1	0.0	2	0 1
+527	4	0.0	2	0 4
+541	1	0.0	2	1
+548	1	0.0	2	1
+561	1	0.0	2	1
+567	2	0.0	2	1 1
+577	1	0.0	2	1
+582	1	0.0	2	1
+587	2	0.0	2	2
+589	1	0.0	2	1
+590	2	0.0	2	2
+596	1	0.0	2	1
+599	3	0.0	2	3
+604	2	0.0	2	2
+605	5	0.0	2	5
+607	2	0.0	2	2
+610	1	0.0	2	1
+611	1	0.0	2	1
+613	2	0.0	2	2
+616	2	0.0	2	2
+617	2	0.0	2	2
+618	1	0.0	2	1
+627	3	0.0	2	3
+638	1	0.0	2	1
+641	1	0.0	2	1
+642	1	0.0	2	1
+644	1	0.0	2	1
+654	5	0.0	2	5
+655	2	0.0	2	2
+656	1	0.0	2	1
+658	10	0.0	2	10
+660	1	0.0	2	1
+661	1	0.0	2	1
+663	2	0.0	2	2
+667	1	0.0	2	1
+677	2	0.0	2	2
+691	1	0.0	2	1
+692	1	0.0	2	1
+708	1	0.0	2	0 1
+709	1	0.0	2	1
+712	1	0.0	2	1
+717	1	0.0	2	1
+728	1	0.0	2	1
+732	1	0.0	2	1
+751	1	0.0	2	1
+753	1	0.0	2	1
+754	1	0.0	2	1
+805	1	0.0	2	1
+809	2	0.0	2	2
+811	1	0.0	2	0 1
+823	1	0.0	2	1
+932	1	0.0	2	1
+1136	1	0.0	2	0 1
+1144	1	0.0	2	1
+1157	1	0.0	2	0 1
+1235	1	0.0	2	1
+1987	1	0.0	2	1
+
+
+=== Adapter 2 ===
+
+Sequence: AACCTGGTTGATCCTGCCAG; Type: regular 5'; Length: 20; Trimmed: 13 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	1	384.9	0	1
+5	1	24.1	0	1
+274	1	0.0	2	0 0 1
+307	1	0.0	2	0 0 1
+511	1	0.0	2	0 0 1
+655	1	0.0	2	0 0 1
+684	1	0.0	2	0 0 1
+693	1	0.0	2	0 0 1
+781	1	0.0	2	0 0 1
+787	1	0.0	2	0 0 1
+830	1	0.0	2	0 0 1
+968	1	0.0	2	0 0 1
+1044	1	0.0	2	0 0 1
+
+
+WARNING:
+    One or more of your adapter sequences may be incomplete.
+    Please see the detailed output above.
