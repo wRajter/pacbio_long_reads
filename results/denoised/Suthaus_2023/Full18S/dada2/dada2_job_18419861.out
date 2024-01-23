@@ -1,0 +1,8 @@
+Loading required package: Rcpp
+Linking to: OpenSSL 1.1.1s  1 Nov 2022
+Dereplicating sequence entries in Fastq file: raw_data/PacBio/Suthaus_2022/Full18S/extracted_18S/extracted_18S_A3_18S.fastq.gz
+Encountered 2836 unique sequences from 6404 total sequences read.
+Warning messages:
+1: Transformation introduced infinite values in continuous y-axis 
+2: Transformation introduced infinite values in continuous y-axis 
+[1] TRUE

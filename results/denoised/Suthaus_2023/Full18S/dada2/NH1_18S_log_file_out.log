@@ -1,0 +1,8 @@
+[1] "Working on sample:"
+[1] "extracted_18S_NH1_18S.fastq.gz"
+Time taken for Dereplication: 5.0587043762207
+20250407 total bases in 12486 reads from 1 samples will be used for learning the error rates.
+Time taken for Error Learning: 3.77341055472692
+[1] TRUE
+Sample 1 - 12486 reads in 6481 unique sequences.
+Time taken for Denoising: 1.00564608971278
