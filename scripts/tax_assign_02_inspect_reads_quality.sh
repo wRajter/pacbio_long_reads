@@ -4,8 +4,6 @@
 
 # Variables
 NCORES=6
-PROJECT="Suthaus_2023"
-MARKER="Full18S"
 RAW_DATA="../raw_data"
 RESULTS_DIR="../results"
 RAW_READS="${RAW_DATA}/pacbio_reads/${PROJECT}/${MARKER}/cell_combined"

@@ -1,0 +1,6 @@
+Working on sample: A3_18S.hifi_reads_subset.fastq.gz 
+Time taken for Dereplication: 0.662994384765625
+2053513 total bases in 1224 reads from 1 samples will be used for learning the error rates.
+Time taken for Error Learning: 1.26786606709162
+Sample 1 - 1224 reads in 862 unique sequences.
+Time taken for Denoising: 20.3016197681427

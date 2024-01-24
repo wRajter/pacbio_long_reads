@@ -41,7 +41,7 @@ The table below provides a detailed look at each step in our bioinformatics anal
 |Clustering            | [`tax_assign_06_cluster_otu.sh`][script8]          | results/denoised -> dada2/RAD                  | results/clustered -> sim_xy                    |
 |Chimera filtering     | [`tax_assign_07_chimera_filt.sh`][script9]         | results/clustered -> sim_xy                    | results -> chimera_filtered                    |
 |Tax. assign. (VSEARCH)| [`tax_assign_08_taxassign.sh`][script10]           | results -> chimera_filtered                    | results -> [tax_assignment_vsearch][ta_vsearch]|
-|Creating summary table| [`tax_assign_09_create_summary_table.sh`][script11]| results -> [tax_assignment_vsearch][ta_vsearch]| results -> final_tables                        |
+|Creating summary table| [`tax_assign_09_create_summary_table.py`][script11]| results -> [tax_assignment_vsearch][ta_vsearch]| results -> final_tables                        |
 
 
 [script1]: https://github.com/wRajter/pacbio_long_reads/blob/master/scripts/tax_assign_01_merge_cells.sh

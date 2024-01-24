@@ -2,12 +2,14 @@
 
 using Pkg
 
+# Pkg.add("SHA")
 # Pkg.add(url="https://github.com/MurrellGroup/NextGenSeqUtils.jl")
 # Pkg.add(url="https://github.com/MurrellGroup/DPMeansClustering.jl")
 # Pkg.add(url="https://github.com/MurrellGroup/RobustAmpliconDenoising.jl")
 
 # Load required packages
 using NextGenSeqUtils, RobustAmpliconDenoising, CodecZlib
+using SHA
 
 # Define project information
 project = ENV["PROJECT"]
@@ -43,13 +45,17 @@ for file in files
   seqs, QVs, seq_names = read_fastq(filt_seq_path)
   templates, template_sizes, template_indices = denoise(seqs)
 
+  # Create hashed names for each sequence
+  hashed_names = ["$(bytes2hex(sha1(templates[j])));size=$(template_sizes[j]);" for j in 1:length(template_sizes)]
+
   # Construct the save_fasta path for the denoised sequences
-  save_fasta = joinpath(output_path, "asv_$sample_name" * ".fasta")
+  save_fasta = joinpath(output_path, "$sample_name" * "_asv.fasta")
 
   # Write denoised sequences to a fasta file
-  write_fasta(save_fasta, templates, names = ["seq$(j)_$(template_sizes[j])" for j in 1:length(template_sizes)])
+  # write_fasta(save_fasta, templates, names = ["seq$(j)_$(template_sizes[j])" for j in 1:length(template_sizes)])
+  write_fasta(save_fasta, templates, names = hashed_names)
 
   # Print a message indicating completion for the current sample
-  println("Denoising for $sample_name done. Fasta file save to $save_fasta")
+  println("Denoising for $sample_name done. Fasta file saved to $save_fasta")
 
 end
