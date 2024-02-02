@@ -1,0 +1,14 @@
+vsearch v2.22.1_linux_x86_64, 7.4GB RAM, 16 cores
+https://github.com/torognes/vsearch
+
+Reading file ../results/denoised/Suthaus_2023_test/Full18S_test/RAD/NH1_18S_asv.fasta 100%
+71372 nt in 41 seqs, min 654, max 1987, avg 1741
+Masking 100%
+Sorting by length 100%
+Counting k-mers 100%
+Clustering 100%
+Sorting clusters 100%
+Writing clusters 100%
+Clusters: 24 Size min 1, max 6, avg 1.7
+Singletons: 16, 39.0% of seqs, 66.7% of clusters
+Multiple alignments 100%

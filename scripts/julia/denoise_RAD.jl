@@ -8,7 +8,8 @@ using Pkg
 # Pkg.add(url="https://github.com/MurrellGroup/RobustAmpliconDenoising.jl")
 
 # Load required packages
-using NextGenSeqUtils, RobustAmpliconDenoising, CodecZlib
+# using NextGenSeqUtils, RobustAmpliconDenoising, CodecZlib
+using RobustAmpliconDenoising
 using SHA
 
 # Define project information
@@ -46,6 +47,7 @@ for file in files
   templates, template_sizes, template_indices = denoise(seqs)
 
   # Create hashed names for each sequence
+  # Added by Lubomir to name the ASVs based on the hash algorithm - to recognize the identical seqs among samples
   hashed_names = ["$(bytes2hex(sha1(templates[j])));size=$(template_sizes[j]);" for j in 1:length(template_sizes)]
 
   # Construct the save_fasta path for the denoised sequences

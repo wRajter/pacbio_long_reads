@@ -1,0 +1,11 @@
+Sample,NumClusters
+A3_18S,
+Mock_18S,
+NH1_18S,
+NH4_18S,
+Sim17_18S,
+Sim22_18S,
+Th16_18S,
+Th38_18S,
+Th40_18S,
+X17007_18S,
