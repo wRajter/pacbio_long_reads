@@ -1,7 +1,6 @@
 # Imports
 import os
 import pandas as pd
-import openpyxl
 
 
 # Variables

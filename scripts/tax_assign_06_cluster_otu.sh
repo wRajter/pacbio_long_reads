@@ -15,6 +15,7 @@ read THRESHOLD
 # Add similarity treshold to the SIM variable
 SIM="sim_${THRESHOLD#0.}"
 
+
 # input directory:
 DENOISE_DIR="${RESULTS_DIR_PATH}/denoised/${PROJECT}/${MARKER}/${DENOISE_METHOD}"
 # output directory:
@@ -25,10 +26,11 @@ CLUST_DIR="${RESULTS_DIR_PATH}/clustered/${PROJECT}/${MARKER}/${DENOISE_METHOD}/
 ###############################
 
 
-# per sample
 
+# Create output directory
 mkdir -p ${CLUST_DIR}
 
+# Create variable containing all samples that we want to loop through
 SAMPLES=$(ls ${DENOISE_DIR}/*.fasta | \
           awk -F '/' '{ print $NF }' | \
           awk -F '.' '{ print $1 }' | \
@@ -38,6 +40,7 @@ SAMPLES=$(ls ${DENOISE_DIR}/*.fasta | \
 echo "Samples used:"
 echo "$SAMPLES"
 
+
 for SAMPLE in ${SAMPLES}
 do
 
@@ -45,9 +48,11 @@ do
   rm -f ${CLUST_DIR}/${SAMPLE}_otu.fasta
 
   # Clustering
+  VSEARCH_LOG="${CLUST_DIR}/${SAMPLE}_vsearch_log.txt"
   vsearch --cluster_fast ${DENOISE_DIR}/${SAMPLE}_asv.fasta \
           --id ${THRESHOLD} \
           --threads "${THREADS}" \
-          --consout ${CLUST_DIR}/${SAMPLE}_otu.fasta
+          --consout ${CLUST_DIR}/${SAMPLE}_otu.fasta \
+          &> "${VSEARCH_LOG}"
 
 done

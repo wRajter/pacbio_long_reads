@@ -99,3 +99,12 @@ To replicate the analyses performed in this project, follow the steps below:
 3. Install the required Python packages:
     ```bash
     pip install -r requirements.txt
+
+
+## Install R packages:
+To install necessary R packages, run the `install_packages.R` script located in the `scripts` directory.<br>
+Running the script can be done by executing the following in the R console:
+```R
+source("install_packages.R")
+```
+The script should check if a package is installed and install it if it's not.
